@@ -1,0 +1,31 @@
+# This is the hass script i want to trigger when alarm goes off 
+alarm_blink:
+  sequence:
+    # Toggle light 
+    - service: light.toggle
+      data_template:
+        entity_id: light.aurorabedroom
+    # Delay 
+    - delay:
+        milliseconds: 100
+    # Toggle light 
+    - service: light.toggle
+      data_template:
+        entity_id: light.aurorabedroom
+   
+# This is the hass scirpt i want to trigger when timer goes off 
+timer_blink:
+  sequence:
+    # Toggle light
+    - service: light.toggle
+      data_template:
+        entity_id: light.auroratable
+    # Delay 
+    - delay:
+        milliseconds: 100
+    # Toggle Light 
+    - service: light.toggle
+      data_template:
+        entity_id: light.auroratable
+   
+   
